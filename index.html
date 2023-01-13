@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- ---nightmode icon--- -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <!-- ----contact me---- -->
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("37v9Snj9DUZLMTWRs");
+        })();
+    </script>
+    <!-- --footer-- -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Contact Me</title>
+</head>
+
+<body>
+    <header>
+          <img src="./img/pexels-stephan-seeber-1261728.jpg" height="300px" width="1270px">
+    </header>
+    <div id="div9" class="contact">
+        <h2>Contact</h2>
+        <small>Give Some Suggestion</small>
+        <div class="contact-img">
+            <img src="./img/avatar.png">
+        </div>
+        <form onsubmit="sendEmail(); reset(); return false;">
+            <input type="text" placeholder="Your Name" id="name" required>
+            <input type="email" placeholder="Email id" id="email" required>
+            <input type="text" placeholder="Phone no." id="phone">
+            <textarea id="message" placeholder="Message" cols="30" rows="10"></textarea>
+            <button type="submit">Send</button>
+        </form>
+
+    </div>
+    <div>
+        <map name="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d239486.63419110078!2d85.68036286155407!3d20.301150450831464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1909d2d5170aa5%3A0xfc580e2b68b33fa8!2sBhubaneswar%2C%20Odisha!5e0!3m2!1sen!2sin!4v1673621296715!5m2!1sen!2sin" width="1300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></map>
+    </div>
+    </div>
+
+    <div>
+        <footer>
+            <footer class="footer">
+                <div class="footer-content">
+                    <h3>PHOTOGRAPHY</h3>
+                    <small>SHUBHAM NAYAK</small>
+                    <ul class="socials">
+                        <li><a href="https://www.facebook.com/people/Shubham-Nayak/100034777105672/?mibextid=ZbWKwL"
+                                target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/shubham-nayak-579475253" target="_blank"><i
+                                    class="fa-brands fa-linkedin-in"></i></a></li>
+                        <li><a href="https://github.com/asterix014" target="_blank"><i
+                                    class="fa-brands fa-github"></i></a></li>
+                        <li><a href="https://www.instagram.com/_asteri_x_/" target="_blank"><i
+                                    class="fa-brands fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+                <div class="footer-bottom">
+                    <p>copyright &copy;2022 Photography. designed by <span>SHUBHAM NAYAK</span></p>
+                </div>
+            </footer>
+        </footer>
+
+
+        <div class="socialbar">
+            <ul>
+                <li><a href="https://www.facebook.com" target="_blank" class="facebook"><ion-icon
+                            name="logo-facebook"></ion-icon></a></li>
+                <li><a href="https://www.linkedin.com" target="_blank" class="linkedin"><ion-icon
+                            name="logo-linkedin"></ion-icon></a></li>
+                <li><a href="https://github.com/asterix014" target="_blank" class="github"><ion-icon
+                            name="logo-github"></ion-icon></a></li>
+                <li><a href="https://www.instagram.com/_asteri_x_/" target="_blank" class="instagram"><ion-icon
+                            name="logo-instagram"></ion-icon></a></li>
+            </ul>
+        </div>
+
+    </div>
+   
+</body>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js">
+</script>
+<script>
+    function sendEmail() {
+
+        Email.send({
+            SecureToken: "f86da67e-56f1-4e36-8c3e-aee6f0fb5eab",
+            To: 'shubhamnayak446@gmail.com',
+            From: "shubhamnayakrb014@gmail.com",
+            Subject: "New Contact Form Enquiry",
+            Body: "Name: " + document.getElementById("name").value +
+                "<br> Email: " + document.getElementById("email").value
+                + "<br/> Phone no: " + document.getElementById("phone").value
+                + "<br/> Message: " + document.getElementById("message").value
+        }).then(
+            message => alert("Message Sent Succesfully")
+        );
+    }
+</script>
+
+</html>
